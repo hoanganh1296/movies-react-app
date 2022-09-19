@@ -7,7 +7,7 @@ const BASE_URL = "https://api.themoviedb.org/3";
 export const getNetflixOriginals = () => async (dispatch) => {
   try {
     const result = await axios.get(
-      `${BASE_URL}/discover/tv?api_key=${API_KEY}&include_adult=true&with_networks=213`
+      `${BASE_URL}/discover/tv?api_key=${API_KEY}&with_networks=213`
     );
     dispatch({
       type: Types.GET_NETFLIX_ORIGINALS,
